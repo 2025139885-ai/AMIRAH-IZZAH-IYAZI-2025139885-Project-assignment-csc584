@@ -1,0 +1,364 @@
+/* style.css - Main styles for forms and basic pages */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #4a148c; /* Darker purple for text for contrast */
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background-image: url('../images/winx_club_logo3.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-color: #FFF0F5;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: #ffffff; /* White background for the content area */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-top: 8px solid #ff69b4; /* Bright pink accent */
+    margin-bottom: 30px; 
+}
+
+/* Header and Logo Styling */
+.logo-header {
+    text-align: center;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #ff1493, #ff69b4); /* Magical pink gradient */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3);
+    border: 2px solid white; /* White border for contrast */
+}
+
+.winx-logo {
+    max-width: 180px; 
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.logo-header h1 {
+    color: white; /* White text for better contrast on pink */
+    margin-top: 5px; 
+    margin-bottom: 5px;
+    font-size: 2.2em;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3); /* Darker shadow for readability */
+}
+
+.logo-header p {
+    color: white; /* White text */
+    font-style: italic;
+    font-size: 1.1em;
+    margin-top: 0; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Form Styling */
+.profile-form label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #8b008b; /* Dark magenta for labels */
+    font-size: 1.1em;
+}
+
+.profile-form input[type="text"],
+.profile-form input[type="email"],
+.profile-form textarea {
+    width: calc(100% - 22px); 
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ffc0cb; /* Light pink border */
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #fff0f5; /* Blushed background for inputs */
+    color: #4a148c;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.profile-form input:focus,
+.profile-form textarea:focus {
+    border-color: #ff69b4; /* Hot pink on focus */
+    box-shadow: 0 0 8px rgba(255, 105, 180, 0.4);
+    outline: none;
+}
+
+.profile-form textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 80px;
+}
+
+.profile-form button {
+    background-color: #ff1493; /* Deep pink submit button */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px; /* Rounded button */
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 30px;
+    display: block;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(255, 20, 147, 0.3);
+}
+
+.profile-form button:hover {
+    background-color: #c71585; /* Medium Violet Red on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(255, 20, 147, 0.4);
+}
+
+/* --- Display Card Styling (for displayProfile.jsp) --- */
+.profile-card {
+    border: 2px solid #ffb6c1; /* Light pink border */
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 30px;
+    background-color: #fff0f5; /* Blushed background for card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.profile-card h3 {
+    color: #8b008b; /* Dark magenta for section titles */
+    border-bottom: 2px dashed #ffb6c1; /* Dashed pink separator */
+    padding-bottom: 10px;
+    margin-top: 25px;
+    font-size: 1.5em;
+}
+
+.profile-card p {
+    margin: 12px 0;
+    font-size: 1.1em;
+    color: #4a148c; /* Dark purple for text */
+}
+
+.profile-card p strong {
+    min-width: 160px; 
+    display: inline-block;
+    color: #c71585; /* Medium Violet Red for strong labels */
+}
+
+.introduction-box {
+    background-color: #ffffff; /* White background for intro box */
+    border: 1px solid #ffd1dc; /* Lighter pink border */
+    padding: 20px;
+    border-left: 6px solid #ff69b4; /* Hot pink accent */
+    border-radius: 8px;
+    margin-top: 15px;
+    font-style: italic;
+    color: #6a0dad; /* Dark purple for intro text */
+    line-height: 1.8;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px dashed #ffc0cb;
+    color: #c71585;
+    font-size: 0.9em;
+}
+
+/* View All Profiles Link */
+.view-all-link {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px dashed #ffb6c1;
+}
+
+.magic-link {
+    display: inline-block;
+    background: linear-gradient(135deg, #9370db, #8a2be2);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+}
+
+.magic-link:hover {
+    background: linear-gradient(135deg, #8a2be2, #6a0dad);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(138, 43, 226, 0.4);
+}
+
+.database-status {
+    background: linear-gradient(135deg, #f0fff0, #e6ffe6);
+    border: 2px solid #98fb98;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    text-align: center;
+    color: #228b22;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(152, 251, 152, 0.2);
+}
+
+/* Action Buttons/Links */
+.action-links {
+    text-align: center;
+    margin: 30px 0;
+    padding: 20px 0;
+    border-top: 2px dashed #ffb6c1;
+    border-bottom: 2px dashed #ffb6c1;
+}
+
+.action-links .magic-link {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #ff69b4, #ff1493);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3);
+}
+
+.action-links .magic-link:hover {
+    background: linear-gradient(135deg, #ff1493, #c71585);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 20, 147, 0.4);
+}
+
+/* View All Profiles Button */
+.magic-link.view-all {
+    background: linear-gradient(135deg, #9370db, #8a2be2);
+}
+
+.magic-link.view-all:hover {
+    background: linear-gradient(135deg, #8a2be2, #6a0dad);
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 50px 20px;
+    color: #ff69b4;
+}
+
+.empty-state h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+/* Box styles for highlighted text */
+.highlight-box {
+    display: inline-block;
+    background-color: #e6f7ff;
+    border: 2px solid #91d5ff;
+    padding: 4px 12px;
+    border-radius: 6px;
+    margin: 2px;
+    font-weight: 600;
+    color: #0050b3;
+    text-decoration: none !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.program-box {
+    background-color: #fff0f5;
+    border: 2px solid #ffb6c1;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    color: #8b008b;
+    display: inline-block;
+}
+
+.email-box {
+    background-color: #f0fff0;
+    border: 2px solid #98fb98;
+    padding: 4px 12px;
+    border-radius: 6px;
+    color: #228b22;
+    display: inline-block;
+}
+
+.hobbies-box {
+    background-color: #fffacd;
+    border: 2px solid #ffd700;
+    padding: 4px 12px;
+    border-radius: 6px;
+    color: #8b4513;
+    display: inline-block;
+}
+
+/* Edit form specific styles */
+.edit-container {
+    max-width: 700px !important;
+}
+
+.edit-header {
+    background: linear-gradient(135deg, #00bfff, #1e90ff);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.edit-form {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn-update {
+    background: linear-gradient(135deg, #32cd32, #228b22);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.btn-update:hover {
+    background: linear-gradient(135deg, #228b22, #006400);
+    transform: translateY(-2px);
+}
+
+.btn-cancel {
+    background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-cancel:hover {
+    background: linear-gradient(135deg, #ff69b4, #ff1493);
+    transform: translateY(-2px);
+}

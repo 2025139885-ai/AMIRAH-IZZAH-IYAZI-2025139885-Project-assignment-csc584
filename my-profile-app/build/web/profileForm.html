@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winx Club Girls - Personal Profile</title>
+    <link rel="icon" type="image/png" href="images/winx_club_logo4.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="logo-header">
+        <h1>Girls Winx Club</h1>
+        <p>Personal Profile</p>
+        <img src="images/winx_club_logo.png" alt="Winx Club Girls Logo" class="winx-logo">
+    </header>
+ 
+    
+    <div class="container">
+        <form action="ProfileServlet" method="POST" class="profile-form">
+            
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="studentId">Student ID:</label>
+            <input type="text" id="studentId" name="studentId" required 
+                   placeholder="e.g.: 0751-0990">
+
+            <label for="program">Program/Course:</label>
+            <input type="text" id="program" name="program" placeholder="e.g.: Multimedia Computing" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@example.com" required>
+
+            <label for="hobbies">Hobbies:</label>
+            <input type="text" id="hobbies" name="hobbies" placeholder="e.g.: Playing Football" required>
+
+            <label for="introduction">Short Self-Introduction:</label>
+            <textarea id="introduction" name="introduction" rows="5" placeholder="e.g.: beautiful with brain" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+        
+        <!-- View All Profiles Link -->
+        <div class="view-all-link">
+            <a href="ProfileServlet" class="magic-link">
+                  View All Saved Profiles
+            </a>
+            <p style="color: #c71585; font-size: 0.9em; margin-top: 10px;">
+                  See all magical Winx Club members in our database!
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,449 @@
+/* viewAllProfiles.css - Updated to match the image design */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+}
+
+/* Main Container */
+.view-all-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Header Section */
+.winx-header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.winx-header h1 {
+    color: #4a4a9c;
+    font-size: 3em;
+    margin: 10px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    font-weight: bold;
+}
+
+.winx-header h2 {
+    color: #ff6b9d;
+    font-size: 1.2em;
+    font-weight: normal;
+    margin: 5px 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Search Panel */
+.search-panel {
+    background: #f8f9ff;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+    border: 2px solid #e6e9ff;
+}
+
+.search-label {
+    display: block;
+    color: #4a4a9c;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.search-row {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search-input {
+    flex: 1;
+    min-width: 300px;
+    padding: 15px 20px;
+    border: 2px solid #d1d5ff;
+    border-radius: 25px;
+    font-size: 1.1em;
+    background: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #4a4a9c;
+    box-shadow: 0 0 0 3px rgba(74, 74, 156, 0.1);
+}
+
+.search-btn {
+    background: linear-gradient(135deg, #4a4a9c, #6b6bd6);
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: all 0.3s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    white-space: nowrap;
+}
+
+.search-btn:hover {
+    background: linear-gradient(135deg, #6b6bd6, #4a4a9c);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(74, 74, 156, 0.4);
+}
+
+/* Example Text */
+.example-text {
+    margin-top: 10px;
+    color: #888;
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+/* Table Container */
+.profiles-table-container {
+    overflow-x: auto;
+    margin: 30px 0;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    background: white;
+}
+
+/* Table styling - FIXED: Allow content to expand */
+.profiles-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto; /* Changed from fixed to auto */
+}
+
+/* Header row */
+.profiles-table th {
+    background: #4a4a9c;
+    color: white;
+    padding: 16px 12px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    position: sticky;
+    top: 0;
+    white-space: nowrap; /* Keep header text on one line */
+}
+
+/* Table cells - FIXED: Allow text to wrap and expand */
+.profiles-table td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal; /* Allow text to wrap */
+}
+
+/* Column widths - Make them flexible */
+.profiles-table th:nth-child(1), /* Name */
+.profiles-table td:nth-child(1) {
+    width: 15%;
+    min-width: 150px;
+}
+
+.profiles-table th:nth-child(2), /* Student ID */
+.profiles-table td:nth-child(2) {
+    width: 12%;
+    min-width: 120px;
+}
+
+.profiles-table th:nth-child(3), /* Email */
+.profiles-table td:nth-child(3) {
+    width: 20%;
+    min-width: 180px;
+}
+
+.profiles-table th:nth-child(4), /* Program */
+.profiles-table td:nth-child(4) {
+    width: 12%;
+    min-width: 100px;
+}
+
+.profiles-table th:nth-child(5), /* Hobbies */
+.profiles-table td:nth-child(5) {
+    width: 15%;
+    min-width: 120px;
+}
+
+.profiles-table th:nth-child(6), /* Introduction - FIXED: Allow to expand */
+.profiles-table td:nth-child(6) {
+    width: auto; /* Takes remaining space */
+    min-width: 200px;
+}
+
+/* Alternate row colors */
+.profiles-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.profiles-table tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* Content styling */
+.name-cell {
+    color: #333;
+    font-weight: 500;
+}
+
+.student-id-cell {
+    color: #666;
+    font-family: monospace;
+    font-size: 13px;
+}
+
+.email-cell {
+    color: #0066cc;
+    word-break: break-all; /* Allow long emails to break */
+}
+
+.program-cell {
+    background: #f0f8ff;
+    padding: 4px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 12px;
+    color: #0066cc;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+.hobbies-cell {
+    color: #666;
+    word-wrap: break-word;
+}
+
+/* INTRODUCTION CELL - FIXED: Remove line clamping */
+.intro-cell {
+    color: #555;
+    line-height: 1.5;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    /* REMOVED: max-height: 42px; */
+    /* REMOVED: overflow: hidden; */
+    /* REMOVED: text-overflow: ellipsis; */
+    /* REMOVED: display: -webkit-box; */
+    /* REMOVED: -webkit-line-clamp: 2; */
+    /* REMOVED: -webkit-box-orient: vertical; */
+}
+
+/* Ensure table doesn't break on small screens */
+@media (max-width: 768px) {
+    .profiles-table-container {
+        margin: 20px -10px;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+    
+    .profiles-table th,
+    .profiles-table td {
+        padding: 12px 8px;
+        font-size: 13px;
+    }
+    
+    /* On mobile, make all columns flexible */
+    .profiles-table th:nth-child(1),
+    .profiles-table td:nth-child(1),
+    .profiles-table th:nth-child(2),
+    .profiles-table td:nth-child(2),
+    .profiles-table th:nth-child(3),
+    .profiles-table td:nth-child(3),
+    .profiles-table th:nth-child(4),
+    .profiles-table td:nth-child(4),
+    .profiles-table th:nth-child(5),
+    .profiles-table td:nth-child(5),
+    .profiles-table th:nth-child(6),
+    .profiles-table td:nth-child(6) {
+        width: auto;
+        min-width: 100px;
+    }
+}
+
+/* Back Button */
+.back-section {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px dashed #e6e9ff;
+}
+
+.btn-back {
+    display: inline-block;
+    background: linear-gradient(135deg, #4a4a9c, #6b6bd6);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn-back:hover {
+    background: linear-gradient(135deg, #6b6bd6, #4a4a9c);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(74, 74, 156, 0.4);
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 60px 40px;
+    background: #f8f9ff;
+    border-radius: 15px;
+    border: 2px dashed #e6e9ff;
+    margin: 30px 0;
+}
+
+.empty-icon {
+    font-size: 4em;
+    color: #4a4a9c;
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.empty-state h3 {
+    color: #4a4a9c;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.empty-state p {
+    color: #666;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .view-all-container {
+        max-width: 95% !important;
+        padding: 20px;
+    }
+    
+    .profiles-table th, 
+    .profiles-table td {
+        padding: 15px 10px;
+        font-size: 0.95em;
+    }
+    
+    .winx-header h1 {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    .profiles-table {
+        min-width: 800px;
+    }
+    
+    .search-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-input {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .search-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .winx-header h1 {
+        font-size: 2em;
+    }
+    
+    .winx-header h2 {
+        font-size: 1em;
+    }
+    
+    .empty-state {
+        padding: 40px 20px;
+    }
+    
+    .empty-state h3 {
+        font-size: 1.5em;
+    }
+    
+    .search-panel {
+        padding: 20px 15px;
+    }
+    
+    .btn-back {
+        padding: 12px 25px;
+        font-size: 1em;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* View button styling */
+.btn-view {
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: bold;
+    background: linear-gradient(135deg, #4a4a9c, #6b6bd6);
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn-view:hover {
+    background: linear-gradient(135deg, #6b6bd6, #4a4a9c);
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(74, 74, 156, 0.3);
+}
